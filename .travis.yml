@@ -3,4 +3,5 @@ language: java
 services:
   - docker
   after_success:
-    - docker-compose up --abort-on-container-ex
+    - docker build -t se_methods .
+    - docker run se_methods
